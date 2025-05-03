@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ES5",
+    "noLib": false
+  },
+  "exclude": ["node_modules"]
+}

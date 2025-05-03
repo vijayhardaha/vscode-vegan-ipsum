@@ -1,0 +1,10 @@
+.gitignore
+.vscode/**
+*.log
+*.tsbuildinfo
+*.vsix
+coverage/**
+eslint.config.mjs
+jsconfig.json
+typings/**
+webpack.config.js

@@ -1,0 +1,73 @@
+{
+	"name": "vegan-ipsum",
+	"displayName": "Vegan Ipsum",
+	"description": "Generates and inserts vegan ipsum text",
+	"version": "1.0.0",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/vijayhardaha/vscode-vegan-ipsum/issues"
+	},
+	"scripts": {
+		"compile-web": "webpack",
+		"watch-web": "webpack --watch",
+		"package-web": "webpack --mode production --devtool hidden-source-map",
+		"lint": "eslint . --ext .js,.mjs",
+		"fix": "eslint . --ext .js,.mjs --fix"
+	},
+	"homepage": "https://github.com/vijayhardaha/vscode-vegan-ipsum",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/vijayhardaha/vscode-vegan-ipsum"
+	},
+	"publisher": "vijayhardaha",
+	"engines": {
+		"vscode": "0.10.x"
+	},
+	"categories": [
+		"Other"
+	],
+	"main": "./extension.js",
+	"browser": "./dist/web/extension.js",
+	"activationEvents": [
+		"onCommand:vegan-ipsum.line",
+		"onCommand:vegan-ipsum.paragraph",
+		"onCommand:vegan-ipsum.multipleParagraphs"
+	],
+	"contributes": {
+		"commands": [
+			{
+				"command": "vegan-ipsum.line",
+				"title": "Vegan Ipsum: Insert a line"
+			},
+			{
+				"command": "vegan-ipsum.paragraph",
+				"title": "Vegan Ipsum: Insert a paragraph"
+			},
+			{
+				"command": "vegan-ipsum.multipleParagraphs",
+				"title": "Vegan Ipsum: Insert multiple paragraphs"
+			}
+		]
+	},
+	"devDependencies": {
+		"@babel/eslint-parser": "^7.27.1",
+		"@babel/preset-env": "^7.27.1",
+		"@eslint/compat": "^1.2.9",
+		"@eslint/eslintrc": "^3.3.1",
+		"@eslint/js": "^9.26.0",
+		"@types/webpack-env": "^1.18.8",
+		"eslint": "^9.26.0",
+		"eslint-config-prettier": "^10.1.2",
+		"eslint-plugin-import": "^2.31.0",
+		"eslint-plugin-prettier": "^5.2.6",
+		"globals": "^16.0.0",
+		"prettier": "^3.5.3",
+		"vscode": "^1.1.37",
+		"webpack": "^5.99.7",
+		"webpack-cli": "^6.0.1"
+	},
+	"dependencies": {
+		"vegan-ipsum": "^1.0.2"
+	},
+	"icon": "images/icon.png"
+}
