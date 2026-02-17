@@ -50,22 +50,22 @@
     ]
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.27.1",
-    "@babel/preset-env": "^7.27.1",
-    "@eslint/eslintrc": "^3.3.1",
-    "@eslint/js": "^9.26.0",
+    "@babel/eslint-parser": "^7.28.6",
+    "@babel/preset-env": "^7.29.0",
+    "@eslint/eslintrc": "^3.3.3",
+    "@eslint/js": "^9.39.2",
     "@types/webpack-env": "^1.18.8",
-    "eslint": "^9.26.0",
-    "eslint-config-prettier": "^10.1.2",
-    "eslint-plugin-prettier": "^5.2.6",
-    "globals": "^16.0.0",
-    "prettier": "^3.5.3",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "globals": "^17.3.0",
+    "prettier": "^3.8.1",
     "vscode": "^1.1.37",
-    "webpack": "^5.99.7",
+    "webpack": "^5.105.2",
     "webpack-cli": "^6.0.1"
   },
   "dependencies": {
-    "vegan-ipsum": "^1.0.2"
+    "vegan-ipsum": "^1.0.4"
   },
   "icon": "images/icon.png"
 }
