@@ -9,7 +9,6 @@
 *.log
 *.tsbuildinfo
 *.vsix
-CHANGELOG.md
 coverage/**
 eslint.config.mjs
 jsconfig.json
