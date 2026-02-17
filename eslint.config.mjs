@@ -14,7 +14,6 @@ const __dirname = path.dirname(__filename);
 // Configure FlatCompat for compatibility with older ESLint configurations
 const compat = new FlatCompat({
   baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended, // Use recommended JavaScript rules
 });
 
 export default defineConfig([
@@ -53,11 +52,6 @@ export default defineConfig([
           presets: ["@babel/preset-env"], // Use Babel preset for modern JavaScript
         },
       },
-    },
-
-    // Define custom rules
-    rules: {
-      "prettier/prettier": ["warn", {}, { usePrettierrc: true }], // Warn on Prettier formatting issues
     },
   },
 ]);
