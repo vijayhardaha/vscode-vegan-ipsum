@@ -1,8 +1,15 @@
+.DS_Store
+.editorconfig
+.git
 .gitignore
+.prettierignore
+.prettierrc
 .vscode/**
+.vscodeignore
 *.log
 *.tsbuildinfo
 *.vsix
+CHANGELOG.md
 coverage/**
 eslint.config.mjs
 jsconfig.json
