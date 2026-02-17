@@ -14,6 +14,7 @@ const __dirname = path.dirname(__filename);
 // Configure FlatCompat for compatibility with older ESLint configurations
 const compat = new FlatCompat({
   baseDirectory: __dirname,
+  recommendedConfig: js.configs.recommended, // Use recommended rules from @eslint/js
 });
 
 export default defineConfig([
@@ -33,7 +34,6 @@ export default defineConfig([
 
   // Extend recommended and Prettier configurations
   ...compat.extends(
-    "eslint:recommended", // Base recommended rules
     "plugin:prettier/recommended" // Prettier integration
   ),
 
