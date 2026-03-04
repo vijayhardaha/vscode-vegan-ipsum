@@ -23,18 +23,13 @@
 	},
 	"publisher": "vijayhardaha",
 	"engines": {
-		"vscode": "0.10.x"
+		"vscode": "^1.80.0"
 	},
 	"categories": [
 		"Other"
 	],
 	"main": "./src/extension.js",
 	"browser": "./dist/web/extension.js",
-	"activationEvents": [
-		"onCommand:vegan-ipsum.line",
-		"onCommand:vegan-ipsum.paragraph",
-		"onCommand:vegan-ipsum.multipleParagraphs"
-	],
 	"contributes": {
 		"commands": [
 			{
@@ -54,20 +49,19 @@
 	"devDependencies": {
 		"@babel/eslint-parser": "^7.28.6",
 		"@babel/preset-env": "^7.29.0",
-		"@eslint/eslintrc": "^3.3.3",
 		"@eslint/js": "^9.39.3",
+		"@types/vscode": "^1.109.0",
 		"@types/webpack-env": "^1.18.8",
 		"eslint": "^9.39.3",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-prettier": "^5.5.5",
 		"globals": "^17.3.0",
 		"prettier": "^3.8.1",
-		"vscode": "^1.1.37",
 		"webpack": "^5.105.2",
 		"webpack-cli": "^6.0.1"
 	},
 	"dependencies": {
-		"vegan-ipsum": "^2.0.0-rc.1"
+		"vegan-ipsum": "^2.0.0-rc.2"
 	},
 	"icon": "images/icon.png"
 }
