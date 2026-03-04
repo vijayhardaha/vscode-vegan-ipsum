@@ -1,57 +1,72 @@
-import path from "node:path";
-import { fileURLToPath } from "node:url";
+/**
+ * ==========================================
+ * ESLINT CONFIGURATION FILE
+ * ==========================================
+ * PURPOSE:
+ *   Provides linting rules and configurations for JavaScript and Node.js.
+ *   Ensures code quality, consistency, and adherence to best practices.
+ * DOCS:
+ *   https://eslint.org/docs/latest/use/configure/configuration-files-new
+ * ==========================================
+ */
 
-import babelParser from "@babel/eslint-parser";
-import { FlatCompat } from "@eslint/eslintrc";
-import js from "@eslint/js";
-import { defineConfig, globalIgnores } from "eslint/config";
 import globals from "globals";
-
-// Resolve __dirname and __filename for ES modules
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Configure FlatCompat for compatibility with older ESLint configurations
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended, // Use recommended rules from @eslint/js
-});
+import js from "@eslint/js";
+import { defineConfig } from "eslint/config";
+import babelParser from "@babel/eslint-parser";
+import pluginPrettier from "eslint-plugin-prettier";
 
 export default defineConfig([
-  // Define global ignore patterns
-  globalIgnores([
-    "**/.git/",
-    "**/node_modules/",
-    "**/dist/",
-    "**/coverage/",
-    "**/types/",
-    "**/*.log",
-    "**/*.tsbuildinfo",
-  ]),
+	// ==========================================
+	// BASE RULES
+	// ==========================================
+	// Includes recommended ESLint rules for JavaScript.
+	js.configs.recommended,
 
-  // Specify file extensions to lint
-  { files: ["**/*.{js,mjs}"] },
+	// ==========================================
+	// PROJECT-SPECIFIC CONFIGURATION
+	// ==========================================
+	{
+		// --- Target Files ---
+		// Specifies the file extensions to lint.
+		files: ["**/*.{js,mjs}"],
 
-  // Extend recommended and Prettier configurations
-  ...compat.extends(
-    "plugin:prettier/recommended" // Prettier integration
-  ),
+		// --- Ignore Patterns ---
+		// Excludes specific directories and files from linting.
+		ignores: [
+			"**/.git/",
+			"**/node_modules/",
+			"**/dist/",
+			"**/coverage/",
+			"**/types/",
+			"**/*.log",
+			"**/*.tsbuildinfo",
+		],
 
-  {
-    // Set language options
-    languageOptions: {
-      ecmaVersion: "latest", // Use the latest ECMAScript version
-      sourceType: "module", // Use ES module syntax
-      globals: {
-        ...globals.node, // Include Node.js global variables
-      },
-      parser: babelParser, // Use Babel parser for advanced syntax
-      parserOptions: {
-        requireConfigFile: false, // Do not require a Babel config file
-        babelOptions: {
-          presets: ["@babel/preset-env"], // Use Babel preset for modern JavaScript
-        },
-      },
-    },
-  },
+		// --- Plugins ---
+		// Registers plugins required for linting.
+		plugins: { prettier: pluginPrettier },
+
+		// --- Language Options ---
+		// Configures the language environment for linting.
+		languageOptions: {
+			ecmaVersion: "latest", // Use the latest ECMAScript version.
+			sourceType: "module", // Use ES module syntax.
+			globals: {
+				...globals.node, // Include Node.js global variables.
+			},
+			parser: babelParser, // Use Babel parser for advanced syntax.
+			parserOptions: {
+				requireConfigFile: false, // Do not require a Babel config file.
+				babelOptions: {
+					// Additional Babel options can be specified here.
+				},
+			},
+		},
+
+		// Apply Prettier rules
+		rules: {
+			"prettier/prettier": "error", // Enforce Prettier formatting as an error.
+		},
+	},
 ]);

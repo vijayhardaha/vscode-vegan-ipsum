@@ -1,8 +1,38 @@
 {
-  "compilerOptions": {
-    "module": "ESNext",
-    "target": "ES5",
-    "noLib": false
-  },
-  "exclude": ["node_modules"]
+	// ==============================================================================
+	// JAVASCRIPT CONFIGURATION FILE
+	// ==============================================================================
+	// Purpose: Configures the JavaScript environment for the project, enabling
+	//          features like module resolution and type checking.
+	// Docs: https://code.visualstudio.com/docs/languages/jsconfig
+	// ==============================================================================
+
+	"compilerOptions": {
+		// ==========================================
+		// MODULE & TARGET SETTINGS
+		// ==========================================
+		// Specifies the module system to use (CommonJS for Node.js compatibility).
+		"module": "esnext",
+
+		// Specifies the ECMAScript version to target.
+		"target": "es2022",
+
+		// ==========================================
+		// TYPE CHECKING
+		// ==========================================
+		// Disables the inclusion of default library files.
+		"noLib": false,
+
+		// Enables type checking for JavaScript files.
+		"checkJs": true,
+
+		// Enables module resolution for Node.js-style imports.
+		"moduleResolution": "bundler"
+	},
+
+	// ==========================================
+	// EXCLUDED FILES & DIRECTORIES
+	// ==========================================
+	// Prevents these directories from being included in the project.
+	"exclude": ["node_modules", "dist", "public", "out"]
 }
