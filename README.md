@@ -6,9 +6,9 @@ A lightweight VS Code extension that generates and inserts vegan-themed lorem ip
 
 1. Open the command palette (<kbd>F1</kbd> or <kbd>Cmd/Ctrl+Shift+P</kbd>).
 2. Type "lorem ipsum" and select one of the following options:
-   - Insert a single line of text.
-   - Insert a paragraph of text.
-   - Insert multiple paragraphs of text.
+    - Insert a single line of text.
+    - Insert a paragraph of text.
+    - Insert multiple paragraphs of text.
 
 ## Customization
 
@@ -24,9 +24,9 @@ By default, these commands do not have keybindings. You can add custom keybindin
 
 ```json
 {
-  "key": "ctrl+shift+l",
-  "command": "vegan-ipsum.paragraph",
-  "when": "editorTextFocus"
+	"key": "ctrl+shift+l",
+	"command": "vegan-ipsum.paragraph",
+	"when": "editorTextFocus"
 }
 ```
 
