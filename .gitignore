@@ -27,7 +27,6 @@
 # PRODUCTION OUTPUT
 # ==========================================
 # Ignore build artifacts and production directories.
-/docs
 /dist
 /typings
 
