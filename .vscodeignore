@@ -8,11 +8,9 @@
 .npmrc
 .nvmrc
 .prettierignore
-.vscode/**
 .vscodeignore
-coverage/**
+docs
 eslint.config.mjs
 jsconfig.json
 prettier.config.mjs
-typings/**
 webpack.config.mjs
