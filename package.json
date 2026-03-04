@@ -61,7 +61,7 @@
 		"webpack-cli": "^6.0.1"
 	},
 	"dependencies": {
-		"vegan-ipsum": "^2.0.0-rc.2"
+		"vegan-ipsum": "^2.0.0"
 	},
 	"icon": "images/icon.png"
 }
