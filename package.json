@@ -4,10 +4,11 @@
 	"description": "Generates and inserts vegan ipsum text",
 	"version": "1.0.1",
 	"license": "MIT",
+	"icon": "images/icon.png",
 	"scripts": {
 		"compile": "webpack",
-		"watch": "webpack --watch",
-		"package": "webpack --mode production --devtool hidden-source-map",
+		"dev": "webpack --watch",
+		"build": "webpack --mode production --devtool hidden-source-map",
 		"lint": "eslint . --ext .js,.mjs",
 		"link:fix": "eslint . --ext .js,.mjs --fix",
 		"format": "prettier --write . \"**/*.{js,mjs,json,md}\"",
@@ -26,7 +27,16 @@
 		"vscode": "^1.80.0"
 	},
 	"categories": [
-		"Other"
+		"Snippets"
+	],
+	"keywords": [
+		"vegan ipsum",
+		"lorem ipsum",
+		"placeholder",
+		"dummy text",
+		"vegan",
+		"text generator",
+		"dummy text generator"
 	],
 	"main": "./src/extension.js",
 	"browser": "./dist/web/extension.js",
@@ -46,6 +56,9 @@
 			}
 		]
 	},
+	"dependencies": {
+		"vegan-ipsum": "^2.0.0"
+	},
 	"devDependencies": {
 		"@babel/eslint-parser": "^7.28.6",
 		"@babel/preset-env": "^7.29.0",
@@ -59,9 +72,5 @@
 		"prettier": "^3.8.1",
 		"webpack": "^5.105.4",
 		"webpack-cli": "^6.0.1"
-	},
-	"dependencies": {
-		"vegan-ipsum": "^2.0.0"
-	},
-	"icon": "images/icon.png"
+	}
 }
