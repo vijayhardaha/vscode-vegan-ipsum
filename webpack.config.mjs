@@ -54,9 +54,6 @@ const config = {
 	resolve: {
 		mainFields: ["browser", "module", "main"], // Prioritizes the `browser` field in package.json for module resolution.
 		extensions: [".js"], // Resolves JavaScript files.
-		alias: {
-			// Define alternate implementations for modules or source files here.
-		},
 		fallback: {
 			// Polyfills for Node.js core modules in Webpack 5.
 			// For more details, see: https://webpack.js.org/configuration/resolve/#resolvefallback
