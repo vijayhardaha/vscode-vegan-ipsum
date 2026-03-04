@@ -17,6 +17,20 @@ import babelParser from "@babel/eslint-parser";
 import pluginPrettier from "eslint-plugin-prettier";
 
 export default defineConfig([
+	// --- Global Ignore Patterns ---
+	{
+		// Excludes specific directories and files from linting.
+		ignores: [
+			"**/.git/",
+			"**/node_modules/",
+			"**/dist/",
+			"**/coverage/",
+			"**/types/",
+			"**/*.log",
+			"**/*.tsbuildinfo",
+		],
+	},
+
 	// ==========================================
 	// BASE RULES
 	// ==========================================
@@ -30,18 +44,6 @@ export default defineConfig([
 		// --- Target Files ---
 		// Specifies the file extensions to lint.
 		files: ["**/*.{js,mjs}"],
-
-		// --- Ignore Patterns ---
-		// Excludes specific directories and files from linting.
-		ignores: [
-			"**/.git/",
-			"**/node_modules/",
-			"**/dist/",
-			"**/coverage/",
-			"**/types/",
-			"**/*.log",
-			"**/*.tsbuildinfo",
-		],
 
 		// --- Plugins ---
 		// Registers plugins required for linting.
