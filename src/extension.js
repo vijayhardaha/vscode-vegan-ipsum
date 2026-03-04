@@ -4,7 +4,7 @@ const veganIpsum = require("vegan-ipsum").veganIpsum;
 /**
  * Activates the extension and registers commands.
  *
- * @param {vscode.ExtensionContext} context - The extension context.
+ * @param {import('vscode').ExtensionContext} context - The extension context.
  */
 function activate(context) {
 	var commands = [
@@ -27,9 +27,7 @@ function activate(context) {
 /**
  * Inserts generated text into the active editor.
  *
- * @param {Object} lorem - The options for text generation.
- * @param {number} lorem.count - The number of units to generate.
- * @param {string} lorem.units - The type of units to generate (e.g., "sentences", "paragraphs").
+ * @param {import('vegan-ipsum').VeganIpsumParams} lorem - The options for text generation.
  */
 function insertText(lorem) {
 	// Get the active text editor
