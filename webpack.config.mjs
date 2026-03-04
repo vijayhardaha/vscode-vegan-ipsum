@@ -15,9 +15,7 @@ import path from "node:path";
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
 /** @typedef {import('webpack').Configuration} WebpackConfig */
-
-/** @type WebpackConfig */
-const webExtensionConfig = {
+const config = {
 	// ==========================================
 	// MODE
 	// ==========================================
@@ -89,4 +87,4 @@ const webExtensionConfig = {
 	devtool: "nosources-source-map", // Generates a source map without exposing the original source code.
 };
 
-export default webExtensionConfig;
+export default config;
