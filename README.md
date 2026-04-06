@@ -32,11 +32,7 @@ The extension exposes the following commands, which you can bind to custom keybo
 To add a custom keybinding, open your `keybindings.json` and add an entry like so:
 
 ```json
-{
-	"key": "ctrl+shift+l",
-	"command": "vegan-ipsum.paragraph",
-	"when": "editorTextFocus"
-}
+{ "key": "ctrl+shift+l", "command": "vegan-ipsum.paragraph", "when": "editorTextFocus" }
 ```
 
 > **Tip:** For detailed instructions on advanced keybinding customization, refer to the [VS Code Keybindings Documentation](https://code.visualstudio.com/docs/getstarted/keybindings#_advanced-customization).
