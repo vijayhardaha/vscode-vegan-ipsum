@@ -1,25 +1,62 @@
 # Changelog
 
-All notable changes to this project are listed below. Each release includes a short summary to help understand the important user- or contributor-facing changes.
+All notable changes to this project will be documented in this file.
 
-## v1.0.1 — 2026-02-17
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-**Summary:**
+## [1.0.3] - 2026-02-18
 
-- Maintenance release: dependency updates, lint/config cleanup, small refactor for clarity, and added editor settings.
+### Added
 
-**Highlights:**
+- AGENTS.md: authoritative reference for AI agents working on the codebase
+- CLAUDE.md: Claude AI configuration/reference document
+- PUBLISH_EXTENSION_GUIDE.md: comprehensive guide for publishing VSCode extensions
+- .github directory for GitHub configuration
+- Husky configuration for Git hooks
+- Commitlint configuration for conventional commits
 
-- Dependencies: updated project dependencies and removed unused ESLint packages to simplify installs and maintenance.
-- Linting & configuration: simplified the ESLint configuration (moved to recommended flatcompact rules and removed custom/unneeded plugins and rules) and renamed lint/fix scripts for clearer developer workflows.
-- Packaging & metadata: cleaned and reformatted `package.json` for consistency and performed a clean install.
-- Editor integration: added a VS Code settings file and expanded the list of files excluded from packaging (vscodeignore) so editor-specific files aren't published.
-- Refactor: streamlined the logic-related code and improved in-code documentation/comments for maintainability.
+### Changed
 
-**Notes:**
+- EditorConfig: updated formatting rules (tabs → spaces, indent size 4 → 2)
+- Git Ignore: expanded patterns for dependencies, build output, cache directories
+- Prettier: simplified configuration using @vijayhardaha/dev-config/prettier
+- ESLint: simplified configuration using @vijayhardaha/dev-config/eslint
+- VSCode launch.json and settings.json formatting
+- Package dependencies (vegan-ipsum, @babel/preset-env, @types/vscode, webpack-cli)
+- Node.js version requirement to 24 in .nvmrc
+- README.md keybinding example formatting
+- src/extension.js formatting (quotes, indentation, structure)
+- webpack.config.mjs formatting
 
-- These changes are internal/maintenance focused and should not affect the public API or end-user behavior.
+### Removed
 
-## v1.0.0 — 2025-05-04
+- Old publishing guide (docs/how-to-publish-vscode-extension.md)
 
-- Initial release of extension.
+## [1.0.2] - 2026-02-17
+
+### Changed
+
+- Updated project dependencies
+- Simplified ESLint configuration
+- Renamed lint/fix scripts for clearer workflows
+- Cleaned and reformatted package.json
+- Updated VSCode settings and vscodeignore exclusions
+- Streamlined logic-related code
+- Improved in-code documentation
+
+### Removed
+
+- Unused ESLint packages
+
+## [1.0.1] - 2025-05-04
+
+### Added
+
+- Initial maintenance release improvements
+
+## [1.0.0] - 2025-05-04
+
+### Added
+
+- Initial release of extension
