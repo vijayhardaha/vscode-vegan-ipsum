@@ -2,7 +2,7 @@
   "name": "vegan-ipsum",
   "displayName": "Vegan Ipsum",
   "description": "Generates and inserts vegan ipsum text",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "icon": "images/icon.png",
   "scripts": {
     "compile": "webpack",
