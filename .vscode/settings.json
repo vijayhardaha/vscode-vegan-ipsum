@@ -5,16 +5,16 @@
 // Docs: https://code.visualstudio.com/docs/getstarted/settings
 // ==============================================================================
 {
-	// Default formatter for JavaScript files (Prettier extension)
-	"[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  // Default formatter for JavaScript files (Prettier extension)
+  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
 
-	// Run ESLint fixes on save
-	"editor.codeActionsOnSave": { "source.fixAll.eslint": "explicit" },
+  // Run ESLint fixes on save
+  "editor.codeActionsOnSave": { "source.fixAll.eslint": "explicit" },
 
-	// Enable ESLint and allow it to format when applicable
-	"eslint.enable": true,
-	"eslint.format.enable": true,
+  // Enable ESLint and allow it to format when applicable
+  "eslint.enable": true,
+  "eslint.format.enable": true,
 
-	// Languages ESLint should validate
-	"eslint.validate": ["javascript", "typescript"]
+  // Languages ESLint should validate
+  "eslint.validate": ["javascript", "typescript"]
 }
