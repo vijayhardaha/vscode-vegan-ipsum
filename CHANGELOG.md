@@ -5,6 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.4] - 2026-05-16
+
+### Added
+
+- ESLint plugin `eslint-plugin-jsdoc` for JSDoc enforcement
+- `.vscodeignore` entry for `.tmp` directory
+
+### Changed
+
+- Scripts: fix `lint:fix` `--ext`/`--fix` flag order so ESLint runs correctly
+- Scripts: expand `format`/`format:check` globs to cover `js,mjs,json,md,yml`
+- Dev dependencies: bump `@vijayhardaha/dev-config` to `^1.1.2`
+- `.gitignore`: reorder sections alphabetically, promote Environment & Secrets header
+- `.prettierignore`: reorder Ai Coding Tools and generated/typings sections
+- `package.json`: standardise script quoting and broaden format globs
+
+### Removed
+
+- `CLAUDE.md` — supplanted by `AGENTS.md`
+- `.github/copilot-instructions.md` — supplanted by `AGENTS.md`
+
 ## [1.0.3] - 2026-02-18
 
 ### Added
